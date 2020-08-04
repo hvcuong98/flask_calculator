@@ -1,0 +1,26 @@
+{% extends 'layout.html' %}
+{% block content %}
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Calculator</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" media="screen" type="text/css" />
+        <script src="https://cdn.jsdelivr.net/npm/nerdamer@latest/nerdamer.core.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/nerdamer@latest/Algebra.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/nerdamer@latest/Calculus.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/nerdamer@latest/Solve.js"></script>
+    </head>
+
+    <style>
+    </style>
+    <body>
+        <h1>Equation Solver</h1>
+        <h2>Input your equation with variable x</h2>
+        <input id="eqnInput" type="text" value="" placeholder="2x^2+4x+2=0"/>
+        <button id="btnSolve" class="btn btn-success" onclick="solveEqn()">Solve Equation</button>
+        <input type="text" disabled="disabled" id="eqnAns" value="" />
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    </body>
+</html>
+{% endblock %}

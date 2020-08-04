@@ -1,0 +1,23 @@
+{% extends 'layout.html' %} {% block title %}Profile{% endblock %} {% block
+content %}
+<h2>Profile Page</h2>
+<div>
+  <h1>Username: {{username}}</h1>
+  <h2>Activity Log</h2>
+  <table>
+    <thead>
+      <th style="margin-left:">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Expression&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+      <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Result</th>
+    </thead>
+
+    <tbody>
+      {%- for row in items %}
+      <tr>
+        <td>{{ row["expression"] }}</td>
+        <td>{{ row["result"] }}</td>
+      </tr>
+      {%- endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %}
